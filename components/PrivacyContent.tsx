@@ -113,24 +113,15 @@ const CARDS: PolicyCard[] = [
       <p>
         The site links out to{" "}
         <a
-          href="https://github.com/Gugilla-Aakash"
+          href="https://github.com/catit417"
           target="_blank"
           rel="noreferrer"
           className="text-violet-300 underline decoration-violet-400/40 underline-offset-4 transition-colors hover:text-violet-200"
         >
           GitHub
         </a>
-        ,{" "}
-        <a
-          href="https://www.linkedin.com/in/gugilla-aakash"
-          target="_blank"
-          rel="noreferrer"
-          className="text-violet-300 underline decoration-violet-400/40 underline-offset-4 transition-colors hover:text-violet-200"
-        >
-          LinkedIn
-        </a>
-        , Google Maps, and live project demos. Once you leave this site, their own privacy
-        policies apply — I do not control what happens there.
+        , Telegram, Google Maps, and live project demos. Once you leave this site, their
+        own privacy policies apply — I do not control what happens there.
       </p>
     ),
   },
@@ -308,10 +299,10 @@ export default function PrivacyContent() {
                       </p>
                       <div className="flex flex-col gap-2 pt-1 sm:flex-row sm:items-center sm:gap-6">
                         <a
-                          href="mailto:aakashgugilla559@gmail.com"
+                          href="mailto:corydavis.rcf@gmail.com"
                           className="break-all text-[15px] text-violet-300 underline decoration-violet-400/40 underline-offset-4 transition-colors hover:text-violet-200 sm:text-[15.5px]"
                         >
-                          aakashgugilla559@gmail.com
+                          corydavis.rcf@gmail.com
                         </a>
                         <Link
                           href="/#contact"

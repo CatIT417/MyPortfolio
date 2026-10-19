@@ -2,13 +2,11 @@
 
 import { motion } from "framer-motion";
 import {
-  BookOpen,
   Boxes,
   Brain,
   CalendarDays,
   Code2,
   GraduationCap,
-  Layers,
   MapPin,
   Palette,
   Rocket,
@@ -23,11 +21,11 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 const BADGES = [
   {
     icon: GraduationCap,
-    value: "B.Tech CSE (AI/ML)",
-    label: "Mahatma Gandhi Institute of Technology (MGIT)",
+    value: "B.S. Computer Science & Mathematics",
+    label: "Florida Institute of Technology",
   },
-  { icon: MapPin, value: "Hyderabad, India", label: "Based In" },
-  { icon: CalendarDays, value: "Expected 2029", label: "Undergraduate" },
+  { icon: MapPin, value: "Florida, US", label: "Based In" },
+  { icon: CalendarDays, value: "Graduated 2016", label: "Melbourne, FL" },
 ];
 
 const ENJOY = [
@@ -40,9 +38,8 @@ const ENJOY = [
 ];
 
 const ABOUT_STATS = [
-  { icon: Star, value: "5+", label: "Major Projects" },
-  { icon: BookOpen, value: "2+", label: "Years of Learning" },
-  { icon: Layers, value: "5+", label: "Technologies" },
+  { icon: Star, value: "22", label: "Major Projects" },
+  { icon: Code2, value: "10+", label: "Years of Experience" },
   { icon: Users, value: "Always", label: "Curious" },
 ];
 
@@ -85,9 +82,10 @@ export default function About() {
               transition={{ duration: 0.7, delay: 0.18 }}
               className="mt-6 max-w-xl text-base leading-relaxed text-white/60 sm:text-lg"
             >
-              I&apos;m Aakash, a Computer Science student (AI/ML) who loves turning ideas into
-              real-world applications. I enjoy exploring technology, learning new things, and
-              building solutions that create impact.
+              I&apos;m Corey, an AI-Native Full Stack Engineer with over 10+ years of
+              experience. I love turning ideas into real-world applications. I enjoy
+              exploring technology, learning new things, and building solutions that
+              create impact.
             </motion.p>
 
             {/* Row of 3 info blocks */}
@@ -167,7 +165,7 @@ export default function About() {
           transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
           className="glass mt-14 rounded-2xl px-5 py-4 shadow-[0_24px_70px_rgba(0,0,0,0.45)] sm:px-6"
         >
-          <div className="grid grid-cols-2 gap-y-5 sm:grid-cols-4 sm:divide-x sm:divide-white/10">
+          <div className="grid grid-cols-1 gap-y-5 sm:grid-cols-3 sm:divide-x sm:divide-white/10">
             {ABOUT_STATS.map((s) => (
               <div
                 key={s.label}

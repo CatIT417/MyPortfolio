@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
-import { GithubIcon, LinkedinIcon } from "./SocialIcons";
+import { GithubIcon } from "./SocialIcons";
 
 const fadeUp = {
   hidden: { y: 28, opacity: 0 },
@@ -34,17 +34,17 @@ function useTypewriter(text: string, speed = 55, startDelay = 500) {
   return out;
 }
 
-function useISTClock() {
+function useESTClock() {
   const [time, setTime] = useState("");
   useEffect(() => {
     const tick = () =>
       setTime(
-        new Intl.DateTimeFormat("en-IN", {
+        new Intl.DateTimeFormat("en-US", {
           hour: "2-digit",
           minute: "2-digit",
           second: "2-digit",
           hour12: true,
-          timeZone: "Asia/Kolkata",
+          timeZone: "America/New_York",
         }).format(new Date())
       );
     tick();
@@ -56,7 +56,7 @@ function useISTClock() {
 
 export default function HeroContent() {
   const typed = useTypewriter("// HELLO, I'M");
-  const ist = useISTClock();
+  const est = useESTClock();
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
   return (
@@ -90,8 +90,8 @@ export default function HeroContent() {
         style={{ transform: `perspective(900px) rotateX(${tilt.y}deg) rotateY(${tilt.x}deg)` }}
         className="transition-transform duration-150 ease-out"
       >
-        <h1 className="font-display text-gradient-aakash cursor-default text-[clamp(3.5rem,9vw,6.5rem)] font-extrabold leading-[0.95] tracking-tight">
-          Aakash
+        <h1 className="font-display text-gradient-hero cursor-default text-[clamp(3.5rem,9vw,6.5rem)] font-extrabold leading-[0.95] tracking-tight">
+          Corey
         </h1>
         <h2 className="font-display mt-3 text-[clamp(1.6rem,4vw,2.6rem)] font-bold leading-[1.08] tracking-tight text-white">
           I build solutions
@@ -107,8 +107,9 @@ export default function HeroContent() {
         custom={2}
         className="mt-5 max-w-xl text-[15px] leading-relaxed text-white/65 sm:text-base"
       >
-        A passionate developer who loves turning ideas into real-world applications. I
-        explore, learn, and build with a focus on impact, usability, and innovation.
+        An AI-Native Full Stack Engineer with 10+ years of experience turning ideas into
+        real-world applications. I explore, learn, and build with a focus on impact,
+        usability, and innovation.
       </motion.p>
 
       {/* CTAs */}
@@ -147,16 +148,10 @@ export default function HeroContent() {
         className="mt-6 flex items-center gap-3"
       >
         <SocialButton
-          href="https://github.com/Gugilla-Aakash"
-          label="GitHub — Gugilla-Aakash"
+          href="https://github.com/catit417"
+          label="GitHub — catit417"
         >
           <GithubIcon className="h-5 w-5" />
-        </SocialButton>
-        <SocialButton
-          href="https://www.linkedin.com/in/gugilla-aakash"
-          label="LinkedIn — gugilla-aakash"
-        >
-          <LinkedinIcon className="h-5 w-5" />
         </SocialButton>
         <span className="ml-2 hidden items-center gap-2 text-xs text-white/60 sm:flex">
           <span className="relative flex h-2 w-2">
@@ -177,11 +172,11 @@ export default function HeroContent() {
       >
         <span className="inline-flex items-center gap-1.5">
           <MapPin className="h-4 w-4 text-violet-400" />
-          Currently in Hyderabad, India
+          Currently in Florida, US
         </span>
-        {ist && (
+        {est && (
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 font-mono text-[12px] text-white/60">
-            IST {ist}
+            EST {est}
           </span>
         )}
       </motion.div>

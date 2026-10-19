@@ -9,7 +9,7 @@ import SkillCard from "./SkillCard";
 const TOOLBOX_STATS = [
   { icon: Code2, value: "10+", label: "Technologies" },
   { icon: Zap, value: "100%", label: "Self Taught" },
-  { icon: BarChart3, value: "5+", label: "Major Projects" },
+  { icon: BarChart3, value: "22", label: "Major Projects" },
   { icon: Heart, value: "Always", label: "Learning" },
 ];
 

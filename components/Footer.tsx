@@ -2,22 +2,22 @@
 
 import { motion } from "framer-motion";
 import { Activity, ArrowRight, ArrowUpRight, Heart, Mail, Sparkle } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 import { LINKS } from "./Navbar";
-import { GithubIcon, LinkedinIcon } from "./SocialIcons";
+import { GithubIcon, TelegramIcon } from "./SocialIcons";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/Gugilla-Aakash", Icon: GithubIcon, iconClass: "text-white" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/gugilla-aakash", Icon: LinkedinIcon, iconClass: "text-[#4ea1f3]" },
+  { label: "GitHub", href: "https://github.com/catit417", Icon: GithubIcon, iconClass: "text-white" },
+  { label: "Telegram", href: "https://t.me/world4one1", Icon: TelegramIcon, iconClass: "text-[#29a9eb]" },
 ];
 
 const OTHERS = [
-  { label: "GitHub", href: "https://github.com/Gugilla-Aakash" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/gugilla-aakash" },
+  { label: "GitHub", href: "https://github.com/catit417" },
+  { label: "Telegram", href: "https://t.me/world4one1" },
 ];
 
 const DIVIDER = "min-w-0 lg:border-l lg:border-white/10 lg:pl-10";
@@ -99,17 +99,11 @@ export default function Footer() {
             className="min-w-0"
           >
             <div className="flex items-center gap-3">
-              <span className="relative block h-11 w-11 overflow-hidden rounded-xl">
-                <Image
-                  src="/logo.webp"
-                  alt="Aakash logo"
-                  width={88}
-                  height={88}
-                  className="h-full w-full scale-125 object-cover mix-blend-screen"
-                />
+              <span className="relative flex h-11 w-11 items-center justify-center">
+                <Logo className="text-[26px]" />
               </span>
               <span className="font-display text-2xl font-semibold tracking-tight text-white">
-                Aakash
+                Corey
               </span>
             </div>
             <p className="mt-3.5 max-w-[290px] text-[15px] leading-relaxed text-white/60">
@@ -215,7 +209,7 @@ export default function Footer() {
           className="mt-10 flex flex-col items-center gap-2.5 rounded-xl border border-white/10 bg-[#0a051c]/70 px-5 py-3.5 backdrop-blur-md sm:flex-row sm:justify-between sm:gap-4 lg:mt-14"
         >
           <p className="text-center text-[13.5px] text-white/55 sm:text-left">
-            © 2026 Aakash. All rights reserved.
+            © 2026 Corey. All rights reserved.
             <span className="mx-1.5 text-white/25">|</span>
             <Link
               href="/privacy"
@@ -237,7 +231,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-center text-[13.5px] text-white/55">
-            Made with <Heart className="h-3.5 w-3.5 fill-[#ff5c8a] text-[#ff5c8a]" /> in India
+            Made with <Heart className="h-3.5 w-3.5 fill-[#ff5c8a] text-[#ff5c8a]" /> in the USA
             <span className="mx-1 text-white/25">|</span>
             Keep Building <ArrowRight className="h-3.5 w-3.5" />
           </p>

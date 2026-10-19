@@ -2,8 +2,8 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
-import Image from "next/image";
 import { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 export const LINKS = [
   { label: "Home", href: "#top" },
@@ -53,18 +53,11 @@ export default function Navbar() {
       <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8">
         {/* Logo */}
         <a href="#top" className="group flex items-center gap-2.5">
-          <span className="relative block h-10 w-10 overflow-hidden rounded-xl">
-            <Image
-              src="/logo.webp"
-              alt="Aakash logo"
-              width={80}
-              height={80}
-              className="h-full w-full scale-125 object-cover mix-blend-screen transition-transform duration-300 group-hover:scale-150"
-              priority
-            />
+          <span className="relative flex h-10 w-10 items-center justify-center">
+            <Logo className="text-2xl transition-transform duration-300 group-hover:scale-110" />
           </span>
           <span className="font-display text-xl font-semibold tracking-tight text-white">
-            Aakash
+            Corey
           </span>
         </a>
 
@@ -96,7 +89,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden lg:block">
-          <MagneticButton href="https://www.linkedin.com/in/gugilla-aakash">
+          <MagneticButton href="#contact">
             Let&apos;s Connect
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </MagneticButton>
@@ -153,9 +146,15 @@ export default function Navbar() {
               ))}
               <li className="pt-2">
                 <a
-                  href="https://www.linkedin.com/in/gugilla-aakash"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setOpen(false);
+                    history.pushState(null, "", "#contact");
+                    setTimeout(() => {
+                      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                    }, 350);
+                  }}
                   className="btn-primary-glow flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 px-5 py-3 text-sm font-semibold text-white"
                 >
                   Let&apos;s Connect <ArrowRight className="h-4 w-4" />
@@ -181,8 +180,8 @@ function MagneticButton({
   return (
     <motion.a
       href={href}
-      target="_blank"
-      rel="noreferrer"
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel={href.startsWith("http") ? "noreferrer" : undefined}
       onMouseMove={(e) => {
         const r = e.currentTarget.getBoundingClientRect();
         setPos({

@@ -69,7 +69,7 @@ body {
   font-family: var(--font-hand);
 }
 
-.text-gradient-aakash {
+.text-gradient-hero {
   background: linear-gradient(92deg, #ffffff 5%, #d9d2ff 38%, #8b7cff 62%, #a855f7 85%);
   -webkit-background-clip: text;
   background-clip: text;

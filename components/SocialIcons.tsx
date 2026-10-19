@@ -6,10 +6,10 @@ export function GithubIcon({ className = "" }: { className?: string }) {
   );
 }
 
-export function LinkedinIcon({ className = "" }: { className?: string }) {
+export function TelegramIcon({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z" />
+      <path d="M23.05 2.15 19.6 21.1c-.26 1.15-.95 1.43-1.92.89l-5.3-3.9-2.56 2.46c-.28.28-.52.52-1.07.52l.38-5.4 9.84-8.89c.43-.38-.09-.59-.67-.21L6.9 13.1l-5.27-1.65c-1.15-.36-1.17-1.15.24-1.7L21.6.86c.95-.36 1.79.21 1.45 1.29z" />
     </svg>
   );
 }

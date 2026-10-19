@@ -11,7 +11,7 @@ import {
   RadioTower,
   Send,
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./SocialIcons";
+import { GithubIcon, TelegramIcon } from "./SocialIcons";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -29,8 +29,8 @@ const CARDS: Card[] = [
   {
     icon: Mail,
     title: "Email",
-    value: "aakashgugilla559@gmail.com",
-    href: "mailto:aakashgugilla559@gmail.com",
+    value: "corydavis.rcf@gmail.com",
+    href: "mailto:corydavis.rcf@gmail.com",
     external: false,
     iconClass: "bg-gradient-to-br from-violet-500 to-indigo-600 text-white",
     glowClass: "shadow-[0_0_30px_rgba(124,58,237,0.22)]",
@@ -38,26 +38,26 @@ const CARDS: Card[] = [
   {
     icon: GithubIcon,
     title: "GitHub",
-    value: "github.com/Gugilla-Aakash",
-    href: "https://github.com/Gugilla-Aakash",
+    value: "github.com/catit417",
+    href: "https://github.com/catit417",
     external: true,
     iconClass: "bg-white/10 text-white",
     glowClass: "shadow-[0_0_30px_rgba(59,130,246,0.2)]",
   },
   {
-    icon: LinkedinIcon,
-    title: "LinkedIn",
-    value: "linkedin.com/in/gugilla-aakash",
-    href: "https://www.linkedin.com/in/gugilla-aakash",
+    icon: TelegramIcon,
+    title: "Telegram",
+    value: "@world4one1",
+    href: "https://t.me/world4one1",
     external: true,
-    iconClass: "bg-[#0A66C2] text-white",
-    glowClass: "shadow-[0_0_30px_rgba(37,99,235,0.22)]",
+    iconClass: "bg-[#29a9eb] text-white",
+    glowClass: "shadow-[0_0_30px_rgba(41,169,235,0.22)]",
   },
   {
     icon: MapPin,
     title: "Location",
-    value: "Hyderabad, India",
-    href: "https://www.google.com/maps/place/Hyderabad",
+    value: "Florida, US",
+    href: "https://www.google.com/maps/place/Florida",
     external: true,
     iconClass: "bg-gradient-to-br from-violet-500 to-indigo-600 text-white",
     glowClass: "shadow-[0_0_30px_rgba(124,58,237,0.22)]",
@@ -72,8 +72,8 @@ type Pill = {
 };
 
 const PILLS: Pill[] = [
-  { icon: GithubIcon, label: "GitHub", href: "https://github.com/Gugilla-Aakash", iconClass: "text-white" },
-  { icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/in/gugilla-aakash", iconClass: "text-[#4ea1f3]" },
+  { icon: GithubIcon, label: "GitHub", href: "https://github.com/catit417", iconClass: "text-white" },
+  { icon: TelegramIcon, label: "Telegram", href: "https://t.me/world4one1", iconClass: "text-[#29a9eb]" },
 ];
 
 const SUBJECT_OPTIONS = [
@@ -239,7 +239,7 @@ export default function Contact() {
                   &ldquo;Let&apos;s turn ideas into reality.&rdquo;
                 </blockquote>
                 <footer className="mt-2 font-mono text-[11px] tracking-[0.3em] text-white/55">
-                  — AAKASH
+                  — COREY
                 </footer>
               </motion.figure>
             </div>
